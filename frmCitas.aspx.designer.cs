@@ -42,13 +42,13 @@ namespace Hospital
         protected global::System.Web.UI.WebControls.Button btnConfirmarCita;
 
         /// <summary>
-        /// Control lblConfirmarCita.
+        /// Control lblMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConfirmarCita;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
 
         /// <summary>
         /// Control txtFecha.
@@ -132,15 +132,6 @@ namespace Hospital
         protected global::System.Web.UI.WebControls.TextBox txtVlrConsulta;
 
         /// <summary>
-        /// Control txtDiagnostico.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiagnostico;
-
-        /// <summary>
         /// Control txtAcompañante.
         /// </summary>
         /// <remarks>
@@ -150,6 +141,15 @@ namespace Hospital
         protected global::System.Web.UI.WebControls.TextBox txtAcompañante;
 
         /// <summary>
+        /// Control txtDiagnostico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDiagnostico;
+
+        /// <summary>
         /// Control btnGuardarCita.
         /// </summary>
         /// <remarks>
@@ -157,5 +157,14 @@ namespace Hospital
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarCita;
+
+        /// <summary>
+        /// Control btnLimpiar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLimpiar;
     }
 }

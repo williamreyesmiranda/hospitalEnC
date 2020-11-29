@@ -6,193 +6,234 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.4/dist/sweetalert2.css">
     <style type="text/css">
-        .auto-style1 {
-            text-align: center;
-            font-size: xx-large;
+        body{
+             font-family:'Century Gothic';
         }
-        .auto-style2 {
-            width: 100%;
-            margin:auto;
-        }
-        .auto-style3 {
-            width: 137px;
-            text-align: center;
+        .titulo {
+            text-align: left;
             font-weight: bold;
+            font-size: 25px;
+            color:#80deff;
+            background-color:#152f5e;
+            padding:15px;
         }
-        .auto-style4 {
-            width: 208px;
-            text-align: left;
-        }
-        .auto-style5 {}
-        .auto-style6 {}
-        .auto-style7 {}
-        .auto-style8 {}
-        .auto-style9 {}
-        .auto-style10 {}
-        .auto-style11 {
-            color: #FF0000;
-            text-align: left;
-        }
-        .auto-style12 {
-            font-weight: 700;
-        }
-        .auto-style13 {
-            font-weight: 700;
-        }
-        .auto-style14 {
-            font-weight: 700;
-        }
-        .auto-style15 {
-            font-weight: 700;
-        }
-        .auto-style16 {
-            width: 137px;
-            height: 23px;
-            text-align: center;
-        }
-        .auto-style17 {
-            width: 208px;
-            height: 23px;
-            text-align: left;
-        }
-        .auto-style18 {
-            height: 23px;
-            width: 162px;
-        }
-        .auto-style19 {
-            width: 162px;
-        }
+        
     </style>
 </head>
-<body>
-    <form id="form1" runat="server">
-        <p class="auto-style1">
-            <strong>ASIGNACION DE CITAS</strong></p>
+<body style="background-color:#d7f3fc" >
+    <div>
+        <img src="https://github.com/williamreyesmiranda/img/blob/main/banner1.png?raw=true" alt="Alternate Text" style="width:100%" />
+    </div>
+    <p class="titulo">
+            Asignación de Citas</p>
+    <div class="container col-md-8 mt-5">
+        <div class="form-group col-md-9 my auto" style="background-color: #ffffff; padding:20px; border-radius:10px">
+    <form id="form1" class="form-sm" runat="server">
+        
+        
+  <div class="form-row ">
+    <div class="form-group col-md-4">
+      <label for="txtCodCita" style="font-weight:bold;">Codigo Cita</label>
+        <asp:TextBox runat="server" CssClass="form-control " 
+               id="txtCodCita" 
+               style="border-radius:6px;"/>
        
-        <table class="auto-style2" style="width:70%">
-            <tr>
-                <td class="auto-style3">Cod cita</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtCodCita" runat="server" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">
-                    <asp:Button ID="btnConfirmarCita" runat="server" CssClass="auto-style12" Text="Confirmar Cita" Width="150px" OnClick="btnConfirmarCita_Click" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">
-                    <asp:Label ID="lblConfirmarCita" runat="server" CssClass="auto-style11" Text="Label" Visible="False"></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Fecha</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtFecha" runat="server" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Hora</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtHora" runat="server" CssClass="auto-style5" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Cod Paciente</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtCodPaciente" runat="server" CssClass="auto-style6" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">
-                    <asp:Button ID="btnBuscarPaciente" runat="server" CssClass="auto-style13" Text="Buscar Paciente" Width="150px" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">
-                    <asp:Label ID="lblPaciente" runat="server" CssClass="auto-style11" Text="Label"></asp:Label>
-                </td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Cod Médico</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtCodMedico" runat="server" CssClass="auto-style7" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">
-                    <asp:Button ID="btnBuscarMedico" runat="server" CssClass="auto-style14" Text="Buscar Médico" Width="150px" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style16"></td>
-                <td class="auto-style17">
-                    <asp:Label ID="lblMedico" runat="server" CssClass="auto-style11" Text="Label"></asp:Label>
-                </td>
-                <td class="auto-style18"></td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Vlr Consulta</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtVlrConsulta" runat="server" CssClass="auto-style8" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Diagnóstico</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtDiagnostico" runat="server" CssClass="auto-style9" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">Acompañante</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtAcompañante" runat="server" CssClass="auto-style10" Width="250px"></asp:TextBox>
-                </td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">
-                    <asp:Button ID="btnGuardarCita" runat="server" CssClass="auto-style15" Text="Guardar Cita" Width="150px" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td class="auto-style19">&nbsp;</td>
-            </tr>
-        </table>
+               
+    </div>
+
+    <div class="form-group col-md-3 ml-2 my-auto">
+        <asp:Button ID="btnConfirmarCita"
+                Class=""
+                Text="Confirmar Cita"
+                runat="server" 
+                style="margin-top:17px; 
+                       border-radius:50px;
+                       background-color:#80deff;
+                       border:none;
+                       padding:8px;
+                       color:#152f5e;
+                       font-weight:bold;"
+                onclick="btnConfirmarCita_Click"/>
+    </div>
+      
+          <asp:Label Text="" 
+              class=""
+              ID="lblMensaje" 
+              runat="server"
+              />
+      
+  </div>
+    <div Class="form-row">
+         <div class="form-group col-md-6">
+             <label for="txtFecha" style="font-weight:bold;">Fecha</label>
+                <asp:TextBox runat="server" class="form-control"
+               id="txtFecha" ReadOnly="True"/>
+             
+     </div>
+
+       
+         <div class="form-group col-md-6">
+           <label for="txtHora" style="font-weight:bold;">Hora</label>
+             <asp:TextBox runat="server"  Class="form-control"
+               id="txtHora" ReadOnly="True"/>
+            
+     </div>
+
+
+ </div>
+                <br />
+                <hr />
+                <br />
+
+  <div class="form-row ">
+    <div class="form-group col-md-4">
+      <label for="txtCodPaciente" style="font-weight:bold;">Código Paciente</label>
+        <asp:TextBox runat="server" 
+               class="form-control " 
+               id="txtCodPaciente" 
+               style="border-radius:6px;" ReadOnly="True"/>
+        
+    </div>
+
+    <div class="form-group col-md-3 ml-3 my-auto">
+        <asp:Button ID="btnBuscarPaciente"
+                class=""
+                Text="Buscar Paciente"
+                runat="server" 
+                style="margin-top:17px; 
+                       border-radius:50px;
+                       background-color:#80deff;
+                       border:none;
+                       padding:8px;
+                       color:#152f5e;
+                       font-weight:bold;" Enabled="False" 
+                OnClick="btnBuscarPaciente_Click"/>
+    </div>
+      <div class="form-group col-md-3 ml-3 my-auto">
+      <asp:Label runat="server" 
+               class="" 
+               id="lblPaciente" 
+               style="margin-top:17px; 
+                       padding:8px;
+                       color:#152f5e;
+                       font-weight:bold;"/>
+    </div>
+  </div>
+
+      <div class="form-row ">
+    <div class="form-group col-md-4">
+      <label for="txtCodMedico" style="font-weight:bold;">Código Médico</label>
+        <asp:TextBox runat="server" 
+                class="form-control" 
+                id="txtCodMedico" 
+                style="border-radius:6px;" ReadOnly="True"/>
+       
+    </div>
+
+    <div class="form-group col-md-3 ml-3 my-auto">
+        <asp:Button ID="btnBuscarMedico"
+                class=""
+                Text="Buscar Médico"
+                runat="server" 
+                style="margin-top:17px; 
+                       border-radius:50px;
+                       background-color:#80deff;
+                       border:none;
+                       padding:8px;
+                       color:#152f5e;
+                       font-weight:bold;" Enabled="False" OnClick="btnBuscarMedico_Click"/>
+    </div>
+          <div class="form-group col-md-3 ml-3 my-auto">
+      <asp:Label runat="server" 
+               class="" 
+               id="lblMedico" 
+               style="margin-top:17px; 
+                       padding:8px;
+                       color:#152f5e;
+                       font-weight:bold;"/>
+    </div>
+
+  </div>
+
+                <br />
+                <hr />
+                <br />
+                
+ <div class="form-row">
+         <div class="form-group col-md-6">
+           <label for="txtVlrConsulta" style="font-weight:bold;">Valor de Consulta</label>
+             <asp:TextBox runat="server" 
+                 class="form-control"
+                 id="txtVlrConsulta"
+                 placeholder="" ReadOnly="True"/>
+             
+     </div>
+
+       
+         <div class="form-group col-md-6">
+           <label for="txtAcompañante" style="font-weight:bold;">Nombre del Acompañante</label>
+             <asp:TextBox runat="server" 
+                  class="form-control"
+               id="txtAcompañante" ReadOnly="True"/>
+         </div>
+
+ </div>
+           <div class="form-group">
+           <label for="txtDiagnostico" style="font-weight:bold;">Diagnostico</label>
+               <asp:TextBox runat="server" 
+                    class="form-control"
+               id="txtDiagnostico" ReadOnly="True"/>
+                              
+     </div>
+
+<div class="form-row">
+<div class="form-group col-md-6">
+       <asp:Button ID="btnGuardarCita"
+                class="btn"
+                Text="Guardar"
+                runat="server" 
+                style="margin-top:17px; 
+                       border-radius:50px;
+                       background-color:#80deff;
+                       border:none;
+                       padding:8px;
+                       color:#152f5e;
+                       font-weight:bold;
+                       width:100%;"
+            onclick="btnGuardarCita_Click" Enabled="False" />
+    </div>
+
+<div class="form-group col-md-6">
+        <asp:Button ID="btnLimpiar"
+                OnClick="btnLimpiar_Click"
+                class=""
+                Text="Limpiar"
+                runat="server" 
+                style="margin-top:17px; 
+                       border-radius:50px;
+                       background-color:#152f5e;
+                       border:none;
+                       padding:8px;
+                       color:#80deff;
+                       font-weight:bold;
+                       width:100%;" Enabled="False" />
+    </div>
+</div>
+ 
+</form>
+   </div>
+        </div>
+        
            
-    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <p>
+        &nbsp;</p>
 </body>
 </html>
